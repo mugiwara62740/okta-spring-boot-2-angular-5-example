@@ -1,0 +1,11 @@
+{
+    "/cool-cars": {
+        "target": "http://localhost:8080",
+        "secure": false
+    },
+    
+    "/cars": {
+        "target": "http://localhost:8080",
+        "secure": false
+    }
+}
