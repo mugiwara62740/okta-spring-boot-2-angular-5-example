@@ -1,6 +1,7 @@
 package com.okta.developer.demo.controller;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,11 +15,9 @@ class CoolCarController {
 	@Autowired
 	private CarService carService;
 
-
 	@GetMapping("/cool-cars")
-	public Collection<Car> coolCars() {
-		return carService.findAllCars();
+	public List<Car> coolCars() {
+		return carService.findAllCars().toList().blockingGet();
 	}
 
-	
 }
